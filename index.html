@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HRMS System</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HRMS Management</h1>
+
+        <h2>Employee Management</h2>
+        <div class="form-group">
+            <input type="text" id="empId" placeholder="Employee ID">
+            <input type="text" id="empName" placeholder="Employee Name">
+            <input type="text" id="empDept" placeholder="Employee Department">
+            <input type="email" id="empEmail" placeholder="Employee Email">
+            <button onclick="addEmployee()">Add Employee</button>
+            <button onclick="updateEmployee()">Update Employee</button>
+            <button onclick="deleteEmployee()">Delete Employee</button>
+            <button onclick="getEmployee()">Get Employee</button>
+        </div>
+
+        <h2>Search Employee</h2>
+        <div class="form-group">
+            <input type="text" id="searchName" placeholder="Search by Employee Name">
+            <button onclick="searchEmployee()">Search</button>
+        </div>
+
+        <h2>Employee List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+                <!-- Populated dynamically -->
+            </tbody>
+        </table>
+
+        <h2>Leave Management</h2>
+        <div class="form-group">
+            <input type="text" id="leaveEmpId" placeholder="Employee ID">
+            <input type="number" id="leaveDays" placeholder="Leave Days">
+            <button onclick="addLeave()">Add Leave</button>
+            <button onclick="deleteLeave()">Delete Leave</button>
+            <button onclick="getLeave()">Get Leave Records</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
